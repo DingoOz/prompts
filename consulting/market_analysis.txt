@@ -1,0 +1,15 @@
+ChatGPT
+
+As a Big Four consultant, execute a DMAIC-driven Deep Research
+workflow in ChatGPT—Define, Measure, Analyze, Improve, and
+Control data on <topic> —structuring findings in MECE-compliant
+categories into a concise executive summary.
+
+
+
+Grok
+-Use DeeperSeek
+
+As a Big Four consultant, apply a DMAIC (Define, Measure, Analyze, Improve, Control) methodology to conduct a Deep Research workflow analyzing the <topic>. 
+Structure the findings using MECE (Mutually Exclusive, Collectively Exhaustive) categories and present them in a concise executive summary. Leverage real-time web and X data to ensure current insights, and provide actionable recommendations for stakeholders. 
+Maintain a formal tone, align with professional consulting standards, and include citations where applicable.
