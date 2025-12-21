@@ -1,0 +1,11 @@
+ENTROPY REVERSAL ENGINE
+
+=== PROMPT ONE: GENERATION ===
+
+A photorealistic digital rendering of a heavily modified Tesla Roadster on a rain-slicked street in a cyberpunk Tokyo night scene, captured from a low-angle rear three-quarter view emphasizing the car's aggressive stance and dramatic lighting. The Tesla features a glossy black and vibrant yellow geometric camouflage wrap with sharp angular patterns, a massive fixed rear wing labeled "Tesla" in white and red lettering, "GROK IMAGINE" branding on the trunk in bold yellow, glowing circular red-orange taillights fully illuminated, dual center-exit exhaust pipes, wide matte black wheels with low-profile tires, red brake calipers, and a Japanese license plate reading "69-420" in white on black.
+
+The wet asphalt road reflects intense neon glows in pink, purple, blue, and yellow, with scattered rain droplets and puddles creating mirror-like surfaces capturing the car's taillights and surrounding lights. Background: dense urban alley lined with tall buildings covered in vibrant multicolored neon signs featuring large Japanese kanji and katakana characters (prominent yellow vertical sign with red kanji on the left, various pink, blue, and orange billboards), blurred bokeh light orbs from distant traffic and signage, hazy atmospheric fog from rain, high contrast moody lighting with strong neon reflections and subtle volumetric glow, cyberpunk aesthetic, ultra-detailed textures on wet surfaces, sharp focus on the car fading to soft depth-of-field blur in the distance.
+
+=== PROMPT TWO: ANIMATION ===
+
+crane shot in, fast motion, zoom in, text: 'grok'
