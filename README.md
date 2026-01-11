@@ -1,6 +1,14 @@
 # prompts
 A collection of my favourite prompts
 
+## Contents
+
+- `agents/` - Claude Code configurations and workflow prompts
+- `consulting/` - Analysis and consulting prompts
+- `contemplative/` - Reflective and philosophical prompts
+- `image_generation/` - Image generation prompts
+- `research/` - Research methodology and analysis prompts
+
 ## Approach
 
 I have a technique for using AI coding assistance that works.
