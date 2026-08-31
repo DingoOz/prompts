@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TITLE – Learning Guide</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<style>
+  :root{
+    --paper:#FBFBF7;
+    --ink:#22242B;
+    --muted:#5E6270;
+    --line:#D9DAD3;
+    /* Entity colours: rename the comments to match this problem's entities. */
+    --e1:#C2410C;    /* entity 1 (orange)  */
+    --e2:#0F766E;    /* entity 2 (teal)    */
+    --e3:#BE185D;    /* entity 3 (magenta) */
+    --e4:#4338CA;    /* entity 4 (indigo)  */
+    --mark:#FFE977;  /* highlighter */
+    --ok:#166534;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:17px;line-height:1.55;
+  }
+  main{max-width:720px;margin:0 auto;padding:32px 20px 96px}
+  h1{font-size:2.1rem;line-height:1.15;margin:0 0 6px;letter-spacing:-.01em}
+  h2{font-size:1.45rem;margin:0 0 8px;line-height:1.25}
+  h3{font-size:1.05rem;margin:22px 0 6px}
+  p{margin:0 0 12px}
+  .sub{color:var(--muted);margin-bottom:28px}
+  .katex-display{margin:10px 0 14px;overflow-x:auto;overflow-y:hidden;padding:4px 0}
+  .katex{font-size:1.08em}
+
+  /* colour legend */
+  .legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:12px 0 4px;font-size:.95rem}
+  .legend span::before{content:"";display:inline-block;width:14px;height:14px;border-radius:3px;margin-right:6px;vertical-align:-2px}
+  .legend .e1::before{background:var(--e1)}
+  .legend .e2::before{background:var(--e2)}
+  .legend .e3::before{background:var(--e3)}
+  .legend .e4::before{background:var(--e4)}
+
+  /* diagrams */
+  figure{margin:16px 0 8px}
+  figure svg{width:100%;height:auto;display:block}
+  figcaption{font-size:.9rem;color:var(--muted);margin-top:6px}
+
+  /* roadmap */
+  .roadmap{border-left:3px solid var(--line);padding-left:18px;margin:14px 0 28px}
+  .roadmap a{display:block;color:var(--ink);text-decoration:none;padding:5px 0;border-bottom:1px dashed var(--line)}
+  .roadmap a:hover,.roadmap a:focus{background:var(--mark);outline:none}
+  .roadmap a b{display:inline-block;min-width:2.1em;color:var(--muted);font-weight:600}
+  .roadmap small{color:var(--muted)}
+
+  /* steps */
+  section.step{margin:44px 0 0;padding-top:22px;border-top:2px solid var(--ink)}
+  .stephead{display:flex;align-items:flex-start;gap:12px}
+  .stephead .num{
+    flex:none;width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.15rem
+  }
+  .stephead label{margin-left:auto;font-size:.85rem;color:var(--muted);white-space:nowrap;cursor:pointer;padding-top:12px}
+  .stephead input{accent-color:var(--ok);width:18px;height:18px;vertical-align:-3px;margin-right:4px}
+  section.step:has(input:checked){opacity:.55}
+  section.step:has(input:checked) .num{background:var(--ok)}
+  .goal{font-weight:600;margin:12px 0 6px}
+  .time{color:var(--muted);font-size:.9rem}
+
+  /* callout boxes */
+  .box{border-radius:8px;padding:12px 16px;margin:14px 0}
+  .why{background:#EEF2FF;border-left:4px solid var(--e4)}
+  .watch{background:#FFF1EC;border-left:4px solid var(--e1)}
+  .tip{background:#ECFDF5;border-left:4px solid var(--ok)}
+  .box p:last-child{margin-bottom:0}
+  .box .t{font-weight:700;display:block;margin-bottom:4px}
+
+  /* collapsible checkpoints */
+  details{background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:10px 16px;margin:14px 0}
+  summary{cursor:pointer;font-weight:600;list-style:none}
+  summary::before{content:"+";display:inline-block;width:1.2em;font-weight:700;color:var(--muted)}
+  details[open] summary::before{content:"–"}
+  details[open]{border-color:var(--ok)}
+  details .ans{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}
+
+  /* maths colour classes (used by the KaTeX macros below) */
+  .ce1{color:var(--e1)} .ce2{color:var(--e2)} .ce3{color:var(--e3)} .ce4{color:var(--e4)}
+  mark{background:var(--mark);padding:0 3px;border-radius:2px}
+
+  table{border-collapse:collapse;width:100%;margin:10px 0 14px;font-size:.98rem}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-weight:600;color:var(--muted)}
+  .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+
+  .recap{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:16px 20px;margin:36px 0}
+  .recap ol{margin:8px 0 0;padding-left:22px}
+  .recap li{margin:4px 0}
+  ul{padding-left:22px}
+  li{margin:4px 0}
+  .small{font-size:.9rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+
+<h1>TITLE</h1>
+<p class="sub">One-line subtitle describing the problem and promising a small-step walk-through.</p>
+
+<div class="box tip">
+  <span class="t">How to use this guide</span>
+  <p>Do one step, tick the box, take a breath. Each step is 2–5 minutes. You do not have to finish in one sitting: the ticks stay while the page is open, and the roadmap lets you jump straight back to where you were.</p>
+  <p>Every [entity type] keeps one colour from the diagram all the way through the algebra. If you lose track of a term, follow its colour back to the [diagram].</p>
+</div>
+
+<div class="legend">
+  <span class="e1">Entity 1 = value</span>
+  <span class="e2">Entity 2 = value</span>
+  <span class="e3">Entity 3 = value</span>
+  <span class="e4">Entity 4 = value</span>
+</div>
+
+<figure>
+  <!-- Inline SVG diagram of the problem. viewBox around 640x240 works well.
+       Use the entity hex colours directly for strokes/labels so they match the CSS vars. -->
+<figcaption>Caption naming the key quantities and initial conditions.</figcaption>
+</figure>
+
+<h2>The mission, in one sentence</h2>
+<p><mark>The single question this whole guide answers.</mark></p>
+<p>Answer to aim for: <strong>FINAL ANSWER</strong>. Stating it up front so every step has a destination.</p>
+
+<div class="box why">
+<span class="t">What you need coming in</span>
+<p>The one or two assumed facts. Everything else is introduced right where it is needed.</p>
+</div>
+
+<h2>The route</h2>
+<div class="roadmap">
+  <a href="#s1"><b>1</b> Step name <small>· 3 min</small></a>
+  <a href="#s2"><b>2</b> Step name <small>· 5 min</small></a>
+  <!-- one anchor per step -->
+</div>
+
+<!-- ===================== STEP 1 (skeleton — copy per step) ===================== -->
+<section class="step" id="s1">
+<div class="stephead"><div class="num">1</div><div><h2>Step name</h2><span class="time">About 3 minutes</span></div><label><input type="checkbox">Done</label></div>
+<p class="goal">Goal: the one move this step makes.</p>
+<p>Narration before each display line ("Move the term across:", "Factor it out:").</p>
+$$\eone{x} + \etwo{y} = \ethree{z}$$
+<div class="box why"><span class="t">Why this works</span>
+<p>Motivation or meaning, at the point of first use.</p></div>
+<div class="box watch"><span class="t">Common slip</span>
+<p>The specific error students actually make here, and how to avoid it.</p></div>
+<details><summary>Checkpoint: an understanding question, not a recall question.</summary><div class="ans">The answer, with the reasoning spelled out.</div></details>
+</section>
+
+<!-- ===================== RECAP ===================== -->
+<div class="recap">
+<h2>The whole route on one card</h2>
+<ol>
+  <li>One line per step.</li>
+</ol>
+</div>
+
+<h2>Sanity checks you can run in ten seconds</h2>
+<ul>
+  <li><strong>Check name:</strong> limit / initial value / root product / order of magnitude.</li>
+</ul>
+
+<h2>Where to go next</h2>
+<p>Related problems, mapped to which steps of this route they exercise.</p>
+
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    /* IMPORTANT: colour macros must use \htmlClass + trust:true.
+       Do NOT put hex colours inside macro strings (\textcolor{#4338CA}{#1}):
+       the "#4" is parsed as a macro parameter and rendering silently fails. */
+    macros: {
+      "\\eone":   "\\htmlClass{ce1}{#1}",
+      "\\etwo":   "\\htmlClass{ce2}{#1}",
+      "\\ethree": "\\htmlClass{ce3}{#1}",
+      "\\efour":  "\\htmlClass{ce4}{#1}"
+    },
+    trust: true,
+    throwOnError: false
+  });
+});
+</script>
+</body>
+</html>
