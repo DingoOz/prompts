@@ -4,6 +4,7 @@ A collection of my favourite prompts
 ## Contents
 
 - `agents/` - Claude Code configurations and workflow prompts
+- `coding/` - Code generation challenge prompts
 - `consulting/` - Analysis and consulting prompts
 - `contemplative/` - Reflective and philosophical prompts
 - `image_generation/` - Image generation prompts

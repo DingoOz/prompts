@@ -1,0 +1,44 @@
+You are generating ONE self-contained HTML file. Output only that file. No markdown fences. No commentary before or after the file.
+
+GOAL
+A browser voxel landscape in Three.js that opens by double-clicking the file or serving it statically. No build step. No other files.
+
+LIBRARIES
+Use only these two script tags, in this order:
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/controls/OrbitControls.js"></script>
+No other CDNs. No images. No fonts. No models. No npm. No import maps.
+
+SCENE — all of the following must exist
+1. Procedural voxel terrain on a 48 x 48 XZ grid. Each cell is one voxel column from y=0 up to a computed height.
+2. Height from 3-octave value noise written inline in the file. No noise library. Height integers from 1 to 16.
+3. Color by height band:
+   y <= 3   water, blue
+   y == 4   sand, tan
+   y 5–8    grass, green
+   y 9–12   rock, grey
+   y >= 13  snow, white
+4. A contiguous lake or river of water voxels. Not scattered single puddles.
+5. 24 to 40 pine trees. Each tree is a brown trunk plus green conical foliage. Place trees only on grass or rock. Never in water or sand.
+6. Exactly 8 box-shaped clouds that drift slowly along +X and wrap.
+7. HemisphereLight plus one DirectionalLight as the sun.
+8. PerspectiveCamera and THREE.OrbitControls. Target the center of the terrain.
+9. A small semi-transparent HTML overlay: "Drag to orbit · Scroll to zoom"
+10. window resize handler that updates camera aspect and renderer size.
+11. requestAnimationFrame loop. The scene must animate on load with no click required.
+
+HARD RULES
+- Do not create a THREE.Mesh per terrain voxel.
+- Terrain must use THREE.InstancedMesh. One InstancedMesh per material. Five materials total for the five height bands.
+- After filling instances call instanceMatrix.needsUpdate = true and set mesh.count to the number used.
+- Trees may be ordinary meshes or extra instances. Total on-screen instances under 10,000.
+- No TextureLoader. Use MeshLambertMaterial or MeshStandardMaterial with flat colors only.
+- body style: margin 0; overflow hidden. Canvas fills the viewport.
+- No document.write. No eval. No external fetch except the two CDN scripts above.
+- Use THREE.OrbitControls from the example script (global constructor).
+
+ACCEPTANCE
+The file must run in Chrome with zero console errors and stay near 60 fps on a laptop.
+
+OUTPUT
+The complete HTML document only. Start with <!DOCTYPE html>.
