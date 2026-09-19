@@ -1,0 +1,35 @@
+Use the uploaded 5-second video as the PRIMARY and LOCKED reference for the subject, face, body, hands, clothing, speech, lip movement, camera movement, framing, lighting, background, laptop, cup, and all original motion.
+
+HIGHEST PRIORITY: PRESERVE THE ORIGINAL VIDEO EXACTLY.
+
+Do NOT regenerate, replace, beautify, modify, reposition, or alter the woman in any way.
+Her face, facial features, skin, hair, body proportions, clothing, hands, fingers, pose, expressions, lip movement, eye movement, and original movements must remain EXACTLY as recorded.
+
+PRESERVE THE ORIGINAL AUDIO COMPLETELY.
+Do NOT modify, regenerate, retime, replace, mute, distort, or lip-sync the speech.
+The spoken phrase must remain exactly:
+"This is a perfect hook for your video. Comment hook, and I'll DM you the link."
+
+Do NOT change the camera, crop, framing, perspective, background, lighting, sofa, laptop, cup, or any existing object.
+
+ONLY ADD ONE VFX EFFECT: realistic green matcha liquid spilling from the cup.
+
+The cup contains vivid natural green matcha.
+
+TIMING AND MOTION:
+At the beginning, keep the original video completely unchanged.
+
+Watch the woman's ORIGINAL cup-hand gesture.
+At the exact moment she naturally thrusts / tilts / points the matcha cup forward as if she is spilling it, generate the matcha splash from INSIDE the cup.
+
+The splash must be physically driven by the ORIGINAL movement of the cup.
+Do not change the movement of her hand or cup to create the effect.
+
+As the cup moves forward, a moderate amount of green matcha should naturally surge over the rim and splash outward into the air.
+
+The matcha must behave like REAL LIQUID:
+dense creamy matcha texture;
+natural viscosity;
+realistic gravity;
+realistic fluid deformation;
+realistic surface tension;

@@ -1,0 +1,100 @@
+EDIT THE ORIGINAL VIDEO ONLY. DO NOT REGENERATE THE SCENE.
+HIGHEST PRIORITY: LOCK THE PERSON
+The woman is a completely LOCKED, UNEDITABLE part of the original footage.
+Keep her visible and unchanged for the entire video.
+DO NOT alter, regenerate, replace, remove, reposition, resize, retouch, or modify:
+- her face
+- facial features
+- skin
+- hair
+- body
+- body proportions
+- clothing
+- hands
+- arms
+- pose
+- gestures
+- movement
+- expression
+Her exact position, movement, and appearance from the original video must remain untouched.
+DO NOT allow any animated object to cross in front of her face, head, hair, shoulders, arms, hands, or body.
+PRESERVE THE ORIGINAL VIDEO
+Keep completely unchanged:
+- sofa
+- windows
+- Bangkok skyline
+- room
+- lighting
+- sunlight
+- reflections
+- shadows
+- camera movement
+- framing
+- perspective
+- composition
+- original audio
+Do not crop or reframe the video.
+Do not change the camera.
+Do not generate a new background.
+Do not modify the city outside the window.
+ONLY ANIMATE EXISTING FREESTANDING OBJECTS ON THE SOFA.
+IMPORTANT:
+Do NOT animate objects being held by the woman, worn by the woman, or overlapping her body.
+The laptop resting directly on the woman's lap must remain exactly where it is.
+Animate only the loose objects positioned independently on the sofa beside her, such as the laptops and other loose items visible on the left and right sides.
+OBJECT MOVEMENT
+At 00:00.00, all eligible loose sofa objects suddenly launch upward.
+The movement must be VERY FAST and energetic.
+Motion:
+original sofa position
+→ rapid upward launch
+→ immediately reach floating position behind the woman
+→ remain suspended
+The launch should take approximately 0.25–0.35 seconds.
+By 00:00.35, every animated object must already be fully suspended.
+DO NOT create slow levitation.
+FINAL OBJECT POSITIONS
+There is limited physical space directly behind the woman, so use the large EMPTY WINDOW AREA ABOVE AND AROUND HER as the visual floating zone.
+Move the objects upward into DIFFERENT HEIGHTS.
+Create a staggered composition:
+- one object high in the upper-left window area
+- one object at a medium-high position on the left or left-center
+- one object high in the upper-right window area
+- remaining loose objects distributed at different heights toward the sides
+The objects should create an arc of floating objects around and ABOVE the woman's head.
+Keep the central area immediately surrounding her face completely clear.
+Objects must NEVER cover the woman's silhouette.
+Maintain generous visual separation between each object.
+Do not stack objects directly on top of each other.
+Do not make every object float at the same height.
+DEPTH / LOCATION
+The floating objects should appear physically BEHIND the woman but IN FRONT OF THE WINDOWS.
+They are floating inside the room.
+DO NOT send the objects outside the window.
+DO NOT place them over the distant city as if they were giant objects outside.
+DO NOT change their realistic scale.
+Keep the objects approximately at their original size and perspective.
+Their apparent depth should remain believable for objects floating several feet behind the woman inside the room.
+AFTER THE LAUNCH
+From approximately 00:00.35 until the end of the video:
+- objects remain at their assigned heights
+- no continued upward movement
+- no falling
+- no sideways drifting
+- no flying toward the camera
+- no flying away from the camera
+- no orbiting around the woman
+- no rotation unless naturally minimal
+Add ONLY a tiny gentle hovering wobble.
+Maximum motion should be subtle, approximately a few pixels of vertical movement.
+Objects must stay visually anchored to their individual floating positions.
+IMPORTANT OCCLUSION RULE
+Objects may move around the woman's silhouette but NEVER THROUGH IT.
+Their trajectories should travel outward first when necessary, then upward, so they never pass across her face, hair, hands, arms, or torso.
+The animation should look like the existing objects suddenly escaped gravity while the original human footage remained completely untouched.
+FINAL RULE:
+PERSON = LOCKED
+CAMERA = LOCKED
+BACKGROUND = LOCKED
+AUDIO = LOCKED
+ONLY THE EXISTING LOOSE SOFA OBJECTS MOVE.

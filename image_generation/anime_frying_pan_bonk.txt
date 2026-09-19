@@ -1,0 +1,57 @@
+ANIME FRYING PAN BONK
+
+=== GROK IMAGINE TEXT-TO-VIDEO PROMPT ===
+
+SCENE CONTEXT
+One continuous locked-off wide shot inside a cluttered high-rise gaming apartment at night. A fully clothed adult man sits at his desk facing the monitor, absorbed in a computer game. An adult anime woman (age 22 or older) carrying a metal frying pan sneaks up behind him from frame-left, swings the pan hard and fast into the back of his head with a single whip-crack strike that knocks him out cold instantly, his head dropping hard onto the desk with a small bounce. She delivers a short Japanese line, then runs off frame-right while giggling.
+
+LOCATION MAP
+Foreground: edge of the desk and chair legs. Midground: the seated man at the gaming desk with dual monitors, keyboard, mouse, RGB lighting, and scattered energy-drink cans. Background: cluttered apartment wall with posters, shelves of figures, city-window view at night. The anime woman enters from frame-left rear, moves behind the man's chair, then exits frame-right. Warm practical room lamps mixed with cool blue monitor glow and red PC accent lights.
+
+FIRST FRAME / BLOCKING
+Wide shot already framed and locked. The man is seated center-right, torso facing the monitors, head slightly forward. The anime woman is partially visible at the far left edge of frame, body oriented toward the man, frying pan held low in both hands at waist height. Spatial relationship readable immediately: she is behind and slightly to his left, outside his peripheral vision.
+
+FORMAT MODE
+One continuous shot, the camera does not cut on its own. The frame stays identical from first second to last.
+
+OPTICS
+47° neutral wide FOV, eye-level height matching the man's seated eye line, deep focus so both the desk and the space behind the chair remain sharp. No drift for the full duration.
+
+CAMERA
+Locked tripod, completely stationary, frame fixed for the entire 15 seconds. The operator stays hands-off after the first frame.
+
+ACTION
+0.0s–3.5s — The man clicks the mouse and taps the keyboard with natural, focused movements, leaning slightly toward the monitor. The anime woman advances on light tiptoe steps from frame-left at about 3 km/h, body low, frying pan close to her torso, eyes fixed on the back of his head.
+
+3.5s–6.0s — She reaches the position directly behind his chair and coils into a short compact wind-up: pan raised above her right shoulder, both hands gripping the handle, weight loaded onto her rear foot, hips turned slightly away like a batter ready to swing.
+
+6.0s–6.5s — She uncoils and swings hard and fast: hips rotate first, shoulders whip through, the pan accelerates through a tight horizontal arc and reaches roughly 30 km/h at the moment the flat of the pan meets the exact center of the back of his head. The full swing takes 0.4 seconds from launch to contact, a single clean whip of motion.
+
+6.5s–7.5s — Knocked out cold, lights out on impact. On the exact contact frame his eyes shut and every muscle releases at once. His head drops hard and fast, driven forward by the strike, and his forehead smacks the desk surface with a solid thud, bounces up once about five centimeters, and lands again, coming to rest cheek-down on the desk. His torso folds forward behind the falling head, arms flopping off the keyboard and mouse and settling limp on the desk. He is out cold and remains completely motionless from this point through the end of the shot, head down, dead to the world.
+
+7.5s–10.5s — She lowers the pan to her side, stands upright behind the slumped man, and speaks her line with clear lip sync while looking down at his knocked-out body, chest rising with a satisfied breath.
+
+10.5s–15.0s — She turns sharply to her right, takes three quick running steps toward frame-right at about 10 km/h, and exits the frame still holding the frying pan, body leaning forward into the run, shoulders bouncing with a giggle.
+
+PERFORMANCE
+Man: fully absorbed in the game until impact, natural micro-adjustments of hands and slight forward lean. From the contact frame onward he is unconscious dead weight: face slack, jaw loose, eyes closed, zero muscle tension anywhere in his body. After the head bounce settles he is a motionless heap draped over the desk, held perfectly still through the end of the shot, clearly out cold.
+
+Anime woman: bright adult face with clean 2D cel-shaded features, mischievous grin, tongue pressed to the corner of her mouth during the wind-up. The swing is committed and athletic: full-body rotation, arms extending through the arc, a small follow-through past the contact point before she checks the pan. After the hit her posture opens into a brief proud stance, then she pivots and runs with lively bouncing steps and a visible giggle that lifts her shoulders. Eyes stay alive with micro-saccades throughout. Playful older-sister prank energy, posture upright and comedic.
+
+PHYSICS
+The frying pan carries visible metal mass and inertia: it lags a fraction behind her hands at the start of the swing, whips through the arc with accelerating momentum, and stops dead on contact with a small vibration through the pan face and her forearms. The man's head falls as pure dead weight accelerated by the strike: fast drop, hard contact with the desk, one small five-centimeter rebound, then final settle with zero further motion. The desk registers the impact: a nearby energy-drink can jitters, the mouse shifts a centimeter. His torso folds forward behind the head and settles as a limp mass, no residual muscle movement afterward. Her hair and clothing trail the swing rotation with natural delay and settle after the follow-through. Her footsteps show clear weight transfer on the sneak and the exit run.
+
+LIGHTING
+Primary sources: warm 3200K practical desk and room lamps from upper left, cool monitor glow illuminating the man's face and hands, red PC case lighting under the desk. Soft natural falloff into the background. The pan catches a brief warm lamp glint as it whips through the swing arc, and the contact shadow of the pan and her arms sweeps across the man's back at the moment of impact.
+
+AUDIO
+Clear adult feminine Japanese anime voice with accurate lip sync delivering exactly: 「おやすみなさい！」
+A sharp air-whoosh as the pan whips through its arc, ending in a single bright comedic metallic BONK on contact, followed immediately by a solid wooden thud as his head hits the desk and a lighter second tap on the bounce landing. Continuous quiet keyboard taps and mouse clicks up to the hit, then silence from the desk. Computer-fan hum, faint game audio from the speakers, quiet room tone, distant city ambience through the window. Her light footsteps on the floor, then a short bright giggle as she runs. Only the listed sounds and the single spoken line.
+
+STYLE
+Photorealistic cluttered apartment interior combined with a crisp, clean 2D cel-shaded adult anime character. Warm practical lighting mixed with cool monitor and red PC accents, natural contact shadows, light cinematic grain. Wholesome slapstick gaming-comedy tone, the energy of a classic anime frying pan bonk.
+
+POSITIVE LOCKS
+Camera remains completely locked and stationary for the full 15 seconds, identical framing first frame to last. The man keeps facing his monitors until the strike and is knocked out cold on the exact contact frame: head drops hard and fast, forehead smacks the desk, one small five-centimeter bounce, then final rest, body limp and motionless through the end of the shot. Single pan strike only, swung hard and fast with full-body rotation, the arc completed in 0.4 seconds. Anime woman is clearly adult (22+), modest casual gaming-themed clothing, 2D cel-shaded style only. Only the one scripted Japanese line is spoken.
+
+Source: https://x.com/tetsuoai/status/2090920134072545673

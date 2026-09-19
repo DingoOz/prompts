@@ -9,6 +9,7 @@ A collection of my favourite prompts
 - `contemplative/` - Reflective and philosophical prompts
 - `image_generation/` - Image generation prompts
 - `research/` - Research methodology and analysis prompts
+- `video_generation/` - Video generation and editing prompts
 
 ## Approach
 

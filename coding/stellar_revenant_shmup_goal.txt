@@ -1,0 +1,123 @@
+GOAL: Build a complete, playable, visually stunning vertical shoot ’em up in the spirit of Sky Force Reloaded. Ship a polished single-player web game that feels AAA: dense particle FX, screen shake, bloom, heat distortion, layered parallax, satisfying hit-stop, and a cinematic audio mix. Generate all art, VFX, UI, and audio yourself. Do not leave placeholder boxes or beep sounds.
+
+TITLE (working): STELLAR REVENANT
+
+PILLARS
+- Vertical scrolling shooter. Camera always travels upward through a long map. Player stays in the lower third of the screen.
+- Auto-fire primary weapon. The ship fires continuously with no button held. Player only steers and triggers secondaries.
+- Dual input: Xbox / generic Gamepad API + full keyboard. Both must work at the same time.
+- Star currency dropped by enemies. Stars persist across runs and buy permanent upgrades between missions.
+- At least 3 fully distinct maps. Each map has mixed static emplacements and moving enemies, mid-wave set pieces, and one unique big boss at the end.
+- Compelling secondary weapons: bombs, missiles, and lasers, each with cooldowns, distinct VFX, and upgrade paths.
+- Feel over feature-list. Every shot, explosion, pickup, and boss phase must read clearly and feel expensive.
+
+TECH
+- Single-page HTML5 game (Canvas 2D or lightweight engine such as Phaser 3). No install, runs in browser.
+- 16:9 or 9:16 portrait-friendly layout with a letterboxed playfield if needed. Target 60fps.
+- Gamepad: left stick / D-pad to move. A = bomb, B = missiles, X or RB = laser. Start = pause. Analog movement with a small deadzone.
+- Keyboard: WASD or arrows move. Space unused for fire (auto-fire). Q = bomb, E or F = missiles, R or Shift = laser. Esc pause.
+- Persist stars, upgrade levels, unlocked maps, and high scores in localStorage.
+- Pause, mute, and a simple settings panel (volume sliders, invert Y optional, rumble on/off).
+- Gamepad rumble on hits, bomb, and boss phase changes when supported.
+
+PLAYER SHIP
+- Sleek interceptor with engine trails, afterburner heat, wing lights, and a faint shield shimmer when healthy.
+- Auto primary: dual / quad forward cannons. Fire rate and projectile count scale with upgrades. Subtle recoil and muzzle flash.
+- Movement: 8-way, snappy with slight inertia. Clamp to playfield. Optional “focus” slower move when holding a modifier (LT / Left Ctrl) for precision.
+- Health: visible hull bar + shield layer. First hits eat shield. Invuln frames + flash + rumble on hit. Game over on hull zero.
+- Star magnet radius that grows with upgrades so stars curve toward the ship.
+
+SECONDARY WEAPONS (all upgradeable)
+1. MEGABOMB — clears most bullets and damages everything on screen. Massive expanding shockwave, white flash, bass drop. Long cooldown. Limited charges per run, refillable via pickups and hangar upgrades.
+2. MISSILES — lock or fire in a spread, home weakly on nearest threats. Smoke trails, staggered launches, clustered explosions. Medium cooldown / ammo.
+3. LASER — hold or tap for a piercing beam that sweeps or locks forward. Heat haze, beam cores, burn marks on bosses. Overheats or has a short energy bar.
+
+PRIMARY UPGRADES (bought with stars in hangar)
+- Main cannon power / fire rate / extra streams
+- Hull integrity
+- Shield capacity + recharge
+- Star magnet range
+- Bomb damage + cooldown + max charges
+- Missile count / tracking / damage
+- Laser width / duration / damage
+Each upgrade has 5–8 tiers with clear numeric preview and a “next cost” shown. Costs scale.
+
+CURRENCY & META
+- Enemies drop small stars (1) and occasional large stars (5). Bosses dump a shower.
+- Stars collected this run + banked stars shown in HUD and hangar.
+- Hangar screen between maps: 3D-ish or illustrated ship bay, upgrade grid, map select, brief flavor text.
+- Completing a map unlocks the next. Replaying earlier maps is allowed to farm stars.
+- Optional medals per map (70% kills, 100% kills, no-hit, all pickups) that grant bonus stars. Implement at least 70% / 100% / no-hit if time is tight.
+
+MAPS (minimum 3, each ~2–4 minutes + boss)
+Design each as a authored scroll with scripted spawn waves, not pure random.
+
+MAP 1 — IRON COAST (dusk ocean / ruined harbors)
+- Mood: amber sun, rusted platforms, AA batteries, patrol boats, gulls, water reflections.
+- Static: shore turrets, bunker guns, mine fields, SAM sites that wake when approached.
+- Dynamic: fighter wings, gunships that strafe across, bombers that drop bombs downward, speedboats.
+- Set pieces: collapsing crane, missile barrage from offscreen destroyer.
+- BOSS: Dreadnought “ORION-KEEL” — multi-deck warship that fills the width. Phases: broadside batteries → rotating laser arrays → exposed core after destroying side turrets. Weak points glow. Intro and death cinematics.
+
+MAP 2 — NEON CANYON (night megacity / canyon of glass)
+- Mood: rain, holograms, neon signage, searchlights, wet asphalt reflections.
+- Static: rooftop flak, billboard drones that unfold into guns, laser fences.
+- Dynamic: drone swarms, tilt-rotor gunships, subway trains that cross the field as moving cover/hazard.
+- Set pieces: skyscraper collapse that changes the scroll path, EMP pulse that briefly blinds HUD.
+- BOSS: “HELIX SPIRE” — hovering command tower with orbiting shield rings. Phases: ring drones → rotating beam spokes → core exposed when rings destroyed. Telegraphs clearly.
+
+MAP 3 — VOID FORGE (orbital foundry / asteroid foundry)
+- Mood: industrial black, molten metal rivers, welding sparks, zero-g debris, solar glare.
+- Static: foundry turrets, magnetic rails that yank projectiles, furnace vents that pulse AoE.
+- Dynamic: asteroid clusters used as cover by enemies, repair drones that heal elites, heavy walkers.
+- Set pieces: gravity shear that tilts bullet patterns, molten flood that forces the player to a lane.
+- BOSS: “PROTO-SUN” — spherical forge core with petal armor. Phases: petal guns → orbiting singularity that pulls stars/bullets → full beam garden. Final explosion is the money shot.
+
+ENEMIES
+- At least 8 distinct types across maps (grunt fighter, armored gunship, turret, bomber, kamikaze, elite shielded, support healer, mini-boss mid-map).
+- Mix of static map objects and mobile units. Static units have wake-up animations and limited aim cones.
+- Attack patterns must be readable: wind-up frames, glow, then fire. Bullet colors distinguish danger types (standard, tracking, laser, explosive).
+- Elites and bosses have weak points. Destroying parts changes the fight.
+- Death: debris, sparks, delayed secondary explosions, star burst. Never a pop-and-vanish.
+
+COMBAT FEEL
+- Auto-fire always on. Fire cadence is musical, not noisy spray.
+- Hit-stop (2–4 frames) on chunky hits and boss part breaks.
+- Screen shake scaled to event size. Never constant.
+- Bullet hell density ramps per map but always leaves escape corridors.
+- Pickup vacuum: stars, weapon crates (bomb/missile/laser refill), health packs, brief power spikes.
+- Combo / chain text for rapid kills (Nice / Great / Superb) with score pop.
+
+UI / HUD
+- Minimal, diegetic: hull, shield, star count, secondary cooldowns as icons with sweep timers.
+- Boss health bar with named phases.
+- Brief mission title card at map start. Victory / defeat screens with stars earned, medals, and “return to hangar”.
+- Hangar is beautiful: your ship on a pad, upgrade nodes lighting up as purchased.
+
+AUDIO (generate or synthesize procedural + samples)
+- Distinct SFX: cannon ticks, missile whoosh, bomb detonation, laser hum, shield break, star collect chime (layered so 20 stars don’t become noise), UI clicks.
+- Per-map music beds that intensify at mid-map and boss. Boss themes must change on phase 2.
+- Mix: music ducked slightly on bomb; bass on explosions. Mute toggle.
+
+VISUAL QUALITY BAR
+- AAA arcade: high-contrast silhouettes, bloom on engines and explosions, motion blur on fast projectiles, parallax 4+ layers, weather (rain, embers, ash) per map.
+- Ship and bosses must look designed, not primitive polygons. If generating sprites, use consistent art direction: dark metal, cyan/amber energy, weathered decals.
+- VFX library: muzzle flash, impact sparks, shock rings, debris, heat shimmer, death blooms, star sparkle trails.
+- No clip-art UI. Custom HUD frames.
+
+STRUCTURE THE CODE
+- Clear modules: input, player, weapons, enemy, spawner/timeline, boss FSM, pickups, upgrades, persist, audio, renderer.
+- Data-driven waves (JSON or JS tables) so maps can be tuned without rewriting systems.
+- Object pools for bullets, particles, enemies.
+- Debug overlay toggle (F1): hitboxes, spawn IDs, FPS.
+
+DELIVERABLES
+1. Playable game from splash → hangar → map 1 → boss → hangar → map 2 → map 3.
+2. All three bosses unique and multi-phase.
+3. Working gamepad + keyboard, auto-fire primary, three secondaries.
+4. Star economy + at least the upgrade list above.
+5. README with controls and how to run.
+6. Polish pass: juice, audio, particles, hangar art, title screen.
+
+ACCEPTANCE
+A player can finish all 3 maps, buy upgrades with stars, feel the ship get stronger, and say the bosses and explosions look expensive. If something must be cut, cut extra medals and extra ships before cutting bosses, secondaries, or juice.
