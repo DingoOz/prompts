@@ -1,22 +1,25 @@
-GOAL: Build a complete, playable, visually stunning vertical shoot ’em up in the spirit of Sky Force Reloaded. Ship a polished single-player web game that feels AAA: dense particle FX, screen shake, bloom, heat distortion, layered parallax, satisfying hit-stop, and a cinematic audio mix. Generate all art, VFX, UI, and audio yourself. Do not leave placeholder boxes or beep sounds.
+GOAL: Build a complete, playable, visually stunning vertical shoot ’em up in the spirit of Sky Force Reloaded. Ship a polished single-player native desktop game, run locally on the operating system available (e.g. Ubuntu), that feels AAA: dense particle FX, screen shake, bloom, heat distortion, layered parallax, satisfying hit-stop, and a cinematic audio mix. Generate all art, VFX, UI, and audio yourself. Do not leave placeholder boxes or beep sounds.
 
 TITLE (working): STELLAR REVENANT
 
 PILLARS
 - Vertical scrolling shooter. Camera always travels upward through a long map. Player stays in the lower third of the screen.
 - Auto-fire primary weapon. The ship fires continuously with no button held. Player only steers and triggers secondaries.
-- Dual input: Xbox / generic Gamepad API + full keyboard. Both must work at the same time.
+- Dual input: Xbox / generic gamepad (via the chosen library's controller API) + full keyboard. Both must work at the same time.
 - Star currency dropped by enemies. Stars persist across runs and buy permanent upgrades between missions.
 - At least 3 fully distinct maps. Each map has mixed static emplacements and moving enemies, mid-wave set pieces, and one unique big boss at the end.
 - Compelling secondary weapons: bombs, missiles, and lasers, each with cooldowns, distinct VFX, and upgrade paths.
 - Feel over feature-list. Every shot, explosion, pickup, and boss phase must read clearly and feel expensive.
 
 TECH
-- Single-page HTML5 game (Canvas 2D or lightweight engine such as Phaser 3). No install, runs in browser.
+- Native local program for the operating system you are running on (detect it first, e.g. Ubuntu Linux). Not a browser game.
+- Use a local game library or engine: SDL2/SDL3 (C/C++), pygame (Python), or Godot 4. Check what is already installed, pick the one that best reaches the quality bar (shaders for bloom / heat distortion are a strong reason to favour Godot or SDL + GPU), and state the choice and why in the README. Install any missing dependencies through the system package manager or pip and record the exact commands.
+- One command to build and one command to run from a clean checkout (e.g. `make run`, `python3 main.py`, or `godot --path .`).
+- Windowed and fullscreen (F11 toggle), resolution-independent scaling.
 - 16:9 or 9:16 portrait-friendly layout with a letterboxed playfield if needed. Target 60fps.
-- Gamepad: left stick / D-pad to move. A = bomb, B = missiles, X or RB = laser. Start = pause. Analog movement with a small deadzone.
+- Gamepad (via the library's native controller API, e.g. SDL GameController): left stick / D-pad to move. A = bomb, B = missiles, X or RB = laser. Start = pause. Analog movement with a small deadzone.
 - Keyboard: WASD or arrows move. Space unused for fire (auto-fire). Q = bomb, E or F = missiles, R or Shift = laser. Esc pause.
-- Persist stars, upgrade levels, unlocked maps, and high scores in localStorage.
+- Persist stars, upgrade levels, unlocked maps, and high scores in a JSON save file under the user data directory (e.g. $XDG_DATA_HOME or ~/.local/share/stellar-revenant/). Write atomically so a crash cannot corrupt the save.
 - Pause, mute, and a simple settings panel (volume sliders, invert Y optional, rumble on/off).
 - Gamepad rumble on hits, bomb, and boss phase changes when supported.
 
@@ -107,17 +110,28 @@ VISUAL QUALITY BAR
 
 STRUCTURE THE CODE
 - Clear modules: input, player, weapons, enemy, spawner/timeline, boss FSM, pickups, upgrades, persist, audio, renderer.
-- Data-driven waves (JSON or JS tables) so maps can be tuned without rewriting systems.
+- Data-driven waves (JSON or data files / tables in the chosen language) so maps can be tuned without rewriting systems.
 - Object pools for bullets, particles, enemies.
 - Debug overlay toggle (F1): hitboxes, spawn IDs, FPS.
+
+PROGRESS TRACKER (build this first, keep it current)
+- Before writing game code, break this whole goal into a numbered task list grouped by milestone (setup, core loop, weapons, enemies, each map, each boss, meta/hangar, audio, polish, README).
+- Create progress.html in the project root: a single self-contained page (inline CSS + JS, no server, no CDN, opens via file://) that shows every task with its status (todo / in progress / done / cut), a per-milestone progress bar, an overall percent complete, the current task highlighted, and a last-updated timestamp.
+- Keep the task data as one inline JS array at the top of the file so updating status is a one-line edit. Add <meta http-equiv="refresh" content="10"> so an open tab stays live.
+- Update progress.html every time a task starts or finishes, before moving on. Add newly discovered tasks; mark cut scope as "cut" with a one-line reason rather than deleting it.
+- Only mark a task done after it has been run and verified in the actual game, not just written.
 
 DELIVERABLES
 1. Playable game from splash → hangar → map 1 → boss → hangar → map 2 → map 3.
 2. All three bosses unique and multi-phase.
 3. Working gamepad + keyboard, auto-fire primary, three secondaries.
 4. Star economy + at least the upgrade list above.
-5. README with controls and how to run.
+5. README with engine choice, dependencies, build/run commands, and controls.
 6. Polish pass: juice, audio, particles, hangar art, title screen.
+7. progress.html showing every task complete or explicitly cut.
 
 ACCEPTANCE
 A player can finish all 3 maps, buy upgrades with stars, feel the ship get stronger, and say the bosses and explosions look expensive. If something must be cut, cut extra medals and extra ships before cutting bosses, secondaries, or juice.
+
+MULTI-MODEL ORCHESTRATION
+I want you to use the three models concurrently to build a game over many hours using a goal prompt. The models are the QWen3.5-.4 model running on ml-server, the qwen3.8-27B model running on ml-server and the qwen36-35B-a3b model running on r730. I want you to create a realtime status webpage locally on ml-server that shows what is planned, what has been worked on, which model has done it, any issues like OOM or running out of context and I want to know of any failures to complete tasks by a model. I would also like a visually stunning graphical representation on that webpage that shows how much work each model has done. All data for the website should be logged to a text based file.
