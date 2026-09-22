@@ -135,3 +135,14 @@ A player can finish all 3 maps, buy upgrades with stars, feel the ship get stron
 
 MULTI-MODEL ORCHESTRATION
 I want you to use the three models concurrently to build a game over many hours using a goal prompt. The models are the QWen3.5-.4 model running on ml-server, the qwen3.8-27B model running on ml-server and the qwen36-35B-a3b model running on r730. I want you to create a realtime status webpage locally on ml-server that shows what is planned, what has been worked on, which model has done it, any issues like OOM or running out of context and I want to know of any failures to complete tasks by a model. I would also like a visually stunning graphical representation on that webpage that shows how much work each model has done. All data for the website should be logged to a text based file.
+
+MODEL BENCHMARK (do this first, keep it quick)
+- Before allocating any work, run a fast benchmark (a few minutes total) on every available model: the same small coding task (e.g. write and fix a short game-module function against a test), plus tokens/sec, time to first token, usable context length, and whether the output ran correctly.
+- Log the results to the text log file and show them on the status webpage.
+- Use the benchmark when allocating work: give the hardest, most architectural tasks (renderer, boss FSMs, shaders) to the strongest model, and fast, well-scoped tasks (data tables, wave scripts, UI wiring, asset generation) to the fastest models. Re-balance if a model keeps failing or hitting OOM / context limits.
+- Every available model must be allocated work. None may sit idle for the whole run.
+
+ITERATION LOOPS (minimum 3)
+- Complete at least 3 full loops of: plan → build → run and playtest → review against this goal → fix and improve.
+- Each loop must end with the game building and running. Record each loop's findings, what changed, and which model did what in the log and on the status webpage.
+- Do not stop after loop 3 if deliverables or acceptance criteria are still unmet.
