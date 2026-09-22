@@ -141,6 +141,7 @@ MODEL BENCHMARK (do this first, keep it quick)
 - Log the results to the text log file and show them on the status webpage.
 - Use the benchmark when allocating work: give the hardest, most architectural tasks (renderer, boss FSMs, shaders) to the strongest model, and fast, well-scoped tasks (data tables, wave scripts, UI wiring, asset generation) to the fastest models. Re-balance if a model keeps failing or hitting OOM / context limits.
 - Every available model must be allocated work. None may sit idle for the whole run.
+- Each model may only have one task assigned at a time. Do not give a model a new task until its current one is finished, failed, or reassigned.
 
 ITERATION LOOPS (minimum 3)
 - Complete at least 3 full loops of: plan → build → run and playtest → review against this goal → fix and improve.
